@@ -37,6 +37,9 @@
 }
 
 
+.Loading svg{
+  animation :          loseOpacity 0.3s linear alternate infinite;
+}
 .Loading p{
   animation :          glowingText 0.3s linear alternate infinite;
 }

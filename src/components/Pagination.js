@@ -50,7 +50,7 @@ class Pagination extends Component {
       <ul className="Pagination">
         {/* em className="pagination-help">You can use the keyboard left / right arrows</em> */}
         <li key="min"      onClick={this.minClick}>{this.props.min}</li>
-        <li key="prev"     onClick={this.prevClick}>{`\u25C0`}</li>
+        <li key="prev"     onClick={this.prevClick}>{`\u25C4`}</li>
         <li key="current"  onClick={() => this.props.query(this.state.currentYear) } className="active">
           <span className="currentYear">
             {this.state.currentYear}

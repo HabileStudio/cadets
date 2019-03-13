@@ -28,6 +28,7 @@ class App extends Component {
     }
 
     this.query      = this.query.bind(this)
+    this.scrollTop  = this.scrollTop.bind(this)
   }
   componentDidMount() {
     this.query(this.state.currentYear)
@@ -36,11 +37,13 @@ class App extends Component {
   query(year) {
     this.setState({ isLoading: true })
 
-    let query = '?body=Earth&date-min='+ year + '-01-01&date-max='+ year + '-12-31'
+    let query = '?body=Earth&fullname=true&date-min='+ year + '-01-01&date-max='+ year + '-12-31'
 
     axios.get(API + query)
       .then(result => {
+        console.log(result)
         this.setState({
+          fields:      result.data.fields,
           data:        result.data.data,
           count:       result.data.count,
           currentYear: year,
@@ -52,6 +55,10 @@ class App extends Component {
         error,
         isLoading: false
       }))
+  }
+
+  scrollTop(){
+    window.scrollTo(0, 0)
   }
 
   render() {
@@ -76,7 +83,12 @@ class App extends Component {
                       max="2100"
                       query={this.query} />
           <TableHead />
-          <Content data={this.state.data} />
+          <Content fields={this.state.fields}
+                   data={this.state.data} />
+
+          <div className="top"
+               onClick={this.scrollTop}>{`\u25B2`}</div>
+
         </div>
       )
     }

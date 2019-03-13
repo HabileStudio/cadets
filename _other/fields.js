@@ -37,3 +37,7 @@ const fields = {
       Nov: 'March',
       Dec: 'March',
     }
+
+    
+    // prod
+    // "start": "node server.js",

@@ -5,13 +5,8 @@ import SmallBody from './SmallBody'
 class Content extends Component {
 
   render() {
-    let sbData = this.props.data.map ( d => {
-      return ({
-      des:    d[0],
-      cd:     d[3],
-      dist:   d[4],
-      v_rel:  d[7],
-      h:      d[10]})
+    let sbData = this.props.data.map( d => {
+      return d.reduce( (obj, value, i) => ({...obj, [this.props.fields[i]]: value}), {} )
     })
     let smallBodies = sbData.map( (d, i) => {
       return (
