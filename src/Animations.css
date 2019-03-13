@@ -1,0 +1,43 @@
+@keyframes loseOpacity {
+  from { opacity:           1;}
+  to   { opacity:           0.7;}
+}
+@keyframes toYellow {
+  from { fill:              #ff9300;}
+  to   { fill:              #ffc500;}
+}
+@keyframes toOrange {
+  from { fill:              #ffcf00;}
+  to   { fill:              #ffb000;}
+}
+
+@keyframes glowingText {
+  from { color:              #0e94d7;}
+  to   { color:              #15c2f3;}
+}
+
+/* SVG PATH ELEMENTS */
+/* PARTS OF THE LOGO */
+.logo-light-yellow,
+.logo-white,
+.logo-brown,
+.logo-dark-brown{
+  animation :       loseOpacity 0.4s ease-in alternate infinite;
+}
+.logo-light-yellow,
+.logo-brown{
+  animation-delay :    0.15s;
+}
+.logo-orange{
+  animation :          toYellow 1.2s ease-in alternate infinite;
+}
+.logo-yellow{
+  animation :          toOrange 1.2s ease-in alternate infinite;
+  animation-delay :    0.5s;
+}
+
+
+.Loading p{
+  animation :          glowingText 0.3s linear alternate infinite;
+}
+

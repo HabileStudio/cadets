@@ -1,33 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,400,700');
+
+html, body{
+  background :    #f4f4f4;
+}
 .App {
-  text-align: center;
+  width :         100%;
+  padding :       0;
+  margin :        0;
+  font-family:    'IBM Plex Sans', sans-serif;
+  font-size:      12px;
+  font-weight:    400;
+  color :         #0e94d7;
+}
+a:link,
+a:visited{
+  text-decoration:  none;
+  color:            #0e94d7;
+  transition :      color 300ms ease-out;
+}
+a:active,
+a:hover{
+  color:            #15c2f3;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.Header{
+  width :         360px;
+  margin :        60px auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  h2{
+    font-size:        11px;
+    font-weight:      400;
+    letter-spacing:   0.1em;
+    text-transform:   uppercase;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.Loading{
+  display :           block;
+  width :             66%;
+  margin :            0 auto 0px auto;
+  padding-top :       30px;
 }
+  .Loading p{
+    margin-top :        28px;
+    font-size :         12px;
+    text-transform:     uppercase;
+    text-align :        center;
+    letter-spacing:     0.2em;
+  }
+  .Loading svg{
+    display:            block;
+    width :             200px;
+    margin :            0 auto;
+  }
+
+ul.Pagination{
+  position:           relative;
+  width :             66%;
+  margin :            30px auto 16px auto;
+  display :           flex;
+  justify-content:    space-between;
+  list-style :        none;
+  padding :           16px;
+  background:         #ffffff;
+  border :            5px solid #ffffff;
+  border-radius :     16px;
+  box-shadow:         0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+  ul.Pagination li{
+    padding :           10px;
+    border-radius :     6px;
+    min-width :         20px;
+    height :            20px;
+    line-height:        20px;
+    background :        #eaeaea;
+    color :             #0e94d7;
+    text-align:         center;
+    transition :        all 300ms ease-out;
+    display :           block;
+  }
+    ul.Pagination li span{
+    }
+    ul.Pagination li span.retrieve{
+      margin-left :       6px;
+      height :            24px;
+      width :             24px;
+      float :             right;
+    }
+    ul.Pagination li:hover{
+      cursor :            pointer;
+      background :        #0e94d7;
+      color :             #ffffff;
+    }
+    ul.Pagination li.active{
+      background :        #0e94d7;
+      color :             #ffffff;
+    }
+    ul.Pagination li.active:hover{
+      background :          #19a5f0;
+    }
+  /*ul.Pagination em.pagination-help{
+    position :            absolute;
+    display :             block;
+    width :               100%;
+    text-align:           center;
+    font-style :          normal;
+    font-size :           10px;
+    top:                  -20px;
+  }*/
+
+.TableHead{
+  width :             66%;
+  margin :            32px auto 16px auto;
+  display :           flex;
+  justify-content:    space-between;
+  color :             #0e94d7;
+}
+.Content{
+
+}
+  .SmallBody{
+    width :             66%;
+    display :           flex;
+    justify-content:    space-between;
+    align-items: center;
+    margin :            5px auto;
+    padding :           16px;
+    background:         #eaeaea;
+    border :            5px solid #ffffff;
+    border-radius :     16px;
+    box-shadow:         0px 0px 10px 0px rgba(0,0,0,0.2);
+    transition:         all 300ms ease-out;
+  }
+  .SmallBody:hover{
+    cursor :            pointer;
+    background:         #ffffff;
+    box-shadow:         0px 0px 15px 0px rgba(0,0,0,0.3);
+    transform:          scale(1.05);
+  }
+
+
+    .TableHead > span,
+    .SmallBody > span {
+      width :             20%;
+      font-size :         12px;
+      letter-spacing:     0.1em;
+      text-align :        center;
+      text-transform:     uppercase;
+    }
+    .SmallBody > span.time{
+      font-weight :       700;
+    }
+    .TableHead > span{
+      font-size :         2vw;
+      font-weight :       200;
+    }
+
+    .TableHead > span:first-child,
+    .SmallBody > span:first-child{
+      text-align :        left;
+    }
+    .TableHead > span:last-child,
+    .SmallBody > span:last-child{
+      text-align :        right;
+    }
